@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
+
+
 * {
     font-family: "Quicksand", "Noto Sans TC";
 }
@@ -16,12 +18,13 @@ body {
 input[type=text] {
     width: 100%;
     border: none;
-    font-size: 16px;
     border-radius: 12px;
+    font-size: 24px;
 }
 
 input::placeholder {
     color: #BDBDBD;
+    font-size: 24px;
 }
 
 .cal-Main {
@@ -33,7 +36,8 @@ input::placeholder {
     border-radius: 12px;
     padding: 64px;
     margin: 0 auto;
-    margin-top: 5vh;
+    margin-top: 10vh;
+    z-index: 10;
 }
 
 .headerBox {
@@ -65,10 +69,11 @@ input::placeholder {
 
     .inputHeight {
         padding-left: 24px;
+        transition: .3s all;
 
         &:focus {
             border: 3px solid $yellow;
-            border-radius: 0 11px 11px 0;
+            border-radius: 0 10px 10px 0;
             outline: none;
         }
     }
@@ -83,7 +88,7 @@ input::placeholder {
         padding-left: 24px;
 
         &__title {
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 16px;
             line-height: 20px;
             text-align: center;
@@ -115,10 +120,11 @@ input::placeholder {
     .inputWeight {
 
         padding-left: 24px;
+        transition: .3s all;
 
         &:focus {
             border: 3px solid $yellow;
-            border-radius: 0 11px 11px 0;
+            border-radius: 0 10px 10px 0;
             outline: none;
         }
 

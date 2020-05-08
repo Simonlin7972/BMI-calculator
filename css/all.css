@@ -147,24 +147,28 @@ body {
 input[type=text] {
   width: 100%;
   border: none;
-  font-size: 16px;
   border-radius: 12px;
+  font-size: 24px;
 }
 
 input::-webkit-input-placeholder {
   color: #BDBDBD;
+  font-size: 24px;
 }
 
 input:-ms-input-placeholder {
   color: #BDBDBD;
+  font-size: 24px;
 }
 
 input::-ms-input-placeholder {
   color: #BDBDBD;
+  font-size: 24px;
 }
 
 input::placeholder {
   color: #BDBDBD;
+  font-size: 24px;
 }
 
 .cal-Main {
@@ -178,7 +182,8 @@ input::placeholder {
   border-radius: 12px;
   padding: 64px;
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 10vh;
+  z-index: 10;
 }
 
 .headerBox__title {
@@ -213,11 +218,13 @@ input::placeholder {
 
 .formHeight .inputHeight {
   padding-left: 24px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
 .formHeight .inputHeight:focus {
   border: 3px solid #C9991D;
-  border-radius: 0 11px 11px 0;
+  border-radius: 0 10px 10px 0;
   outline: none;
 }
 
@@ -236,7 +243,7 @@ input::placeholder {
 }
 
 .formHeight__label__title {
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -271,11 +278,13 @@ input::placeholder {
 
 .formWeight .inputWeight {
   padding-left: 24px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
 .formWeight .inputWeight:focus {
   border: 3px solid #C9991D;
-  border-radius: 0 11px 11px 0;
+  border-radius: 0 10px 10px 0;
   outline: none;
 }
 
