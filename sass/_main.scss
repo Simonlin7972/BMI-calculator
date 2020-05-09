@@ -27,15 +27,44 @@ input::placeholder {
     font-size: 24px;
 }
 
+.maker {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 40px;
+
+    .madeBy {
+        font-size: 16px;
+        line-height: 20;
+        margin-right: 8px;
+        color: $yellow;
+    }
+
+    .simon {
+        font-size: 20px;
+        line-height: 24;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
 .cal-Main {
-    max-width: 640px;
+    max-width: 530px;
     background: #FFFFFF;
     border: 2px solid #CCCCCC;
     box-sizing: border-box;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
     border-radius: 12px;
     padding: 64px;
-    margin: 0 auto;
     margin-top: 10vh;
     z-index: 10;
 }
@@ -44,7 +73,7 @@ input::placeholder {
     &__title {
         font-size: 42px;
         line-height: 64px;
-        font-weight: bold;
+        font-weight: 400;
     }
 
     &__title__en {
@@ -155,26 +184,4 @@ input::placeholder {
         }
     }
 
-}
-
-
-.btnStart {
-    cursor: pointer;
-    color: white;
-    font-size: 24px;
-    width: 100%;
-    height: 64px;
-    background: #C9991D;
-    border: 2px solid #A97F13;
-    box-sizing: border-box;
-    box-shadow: 0px 8px 12px rgba(201, 153, 29, 0.3);
-    border-radius: 12px;
-    transition: .3s all;
-
-    &:hover {
-        background: #A97F13;
-        border: 2px solid #84630D;
-        box-shadow: 0px 12px 20px rgba(201, 153, 29, 0.3);
-        transform: translateY(-2px);
-    }
 }

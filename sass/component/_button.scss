@@ -1,0 +1,26 @@
+.btnStart {
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    width: 100%;
+    height: 64px;
+    background: #C9991D;
+    border: 2px solid #A97F13;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 12px rgba(201, 153, 29, 0.3);
+    border-radius: 12px;
+    transition: .3s all;
+
+    &:focus {
+        outline: 2px solid $yellow;
+        outline-offset: 4px;
+        transition: none;
+    }
+
+    &:hover {
+        background: #A97F13;
+        border: 2px solid #84630D;
+        box-shadow: 0px 12px 20px rgba(201, 153, 29, 0.3);
+        transform: translateY(-2px);
+    }
+}

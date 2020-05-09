@@ -1,0 +1,61 @@
+.resultCard {
+    z-index: -1;
+    background: #FFFBEF;
+    border: 2px solid #C9991D;
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    padding: 64px 52px 64px 120px;
+    max-width: 500px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    transform: translate(-64px, 48px);
+
+
+    &__title {
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    &__bmi {
+        font-size: 80px;
+        line-height: 80px;
+        font-family: "Quicksand";
+        text-align: center;
+        font-weight: 500;
+    }
+
+    &__status {
+        position: relative;
+
+        &__line {
+            position: absolute;
+            background: black;
+            height: 1px;
+        }
+
+        &__text {
+            width: auto;
+            padding: 4px 6px;
+            background: #FFFBEF;
+            font-size: 32px;
+            line-height: 48px;
+            text-align: center;
+        }
+    }
+
+    &__comment {
+        background: white;
+        padding: 16px 32px;
+        border: 1px solid $green;
+        border-radius: 12px;
+
+        &__text {
+            font-size: 16px;
+            line-height: 24px;
+            color: $green;
+            text-align: center;
+        }
+    }
+}
