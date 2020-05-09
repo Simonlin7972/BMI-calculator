@@ -1,5 +1,6 @@
 .resultCard {
-    z-index: -1;
+
+    position: relative;
     background: #FFFBEF;
     border: 2px solid #C9991D;
     box-sizing: border-box;
@@ -9,7 +10,31 @@
     max-width: 500px;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    transform: translate(-64px, 48px);
+    transform: translate(-40px, 48px);
+    transition: .3s all ease-in-out;
+
+    .ic-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        border-radius: 8px;
+        transition: .3s all;
+        cursor: pointer;
+
+
+        &:hover {
+            background: lighten($yellow, 40%);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+    }
 
 
     &__title {
@@ -20,6 +45,7 @@
 
     &__bmi {
         font-size: 80px;
+        color: $green;
         line-height: 80px;
         font-family: "Quicksand";
         text-align: center;
@@ -27,16 +53,20 @@
     }
 
     &__status {
-        position: relative;
+        text-align: center;
 
         &__line {
-            position: absolute;
+            position: relative;
             background: black;
             height: 1px;
+            top: -28px;
+            z-index: -2;
         }
 
         &__text {
-            width: auto;
+            display: inline-block;
+            // max-width: 160px;
+            // margin: 0 auto;
             padding: 4px 6px;
             background: #FFFBEF;
             font-size: 32px;
@@ -58,4 +88,8 @@
             text-align: center;
         }
     }
+}
+
+.shrinkResult {
+    transform: translate(-260px, 48px);
 }

@@ -149,26 +149,31 @@ input[type=text] {
   border: none;
   border-radius: 12px;
   font-size: 24px;
+  font-weight: bold;
 }
 
 input::-webkit-input-placeholder {
   color: #BDBDBD;
   font-size: 24px;
+  font-weight: 400;
 }
 
 input:-ms-input-placeholder {
   color: #BDBDBD;
   font-size: 24px;
+  font-weight: 400;
 }
 
 input::-ms-input-placeholder {
   color: #BDBDBD;
   font-size: 24px;
+  font-weight: 400;
 }
 
 input::placeholder {
   color: #BDBDBD;
   font-size: 24px;
+  font-weight: 400;
 }
 
 .maker {
@@ -200,19 +205,6 @@ input::placeholder {
   line-height: 24;
 }
 
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .cal-Main {
   max-width: 530px;
   background: #FFFFFF;
@@ -225,6 +217,15 @@ input::placeholder {
   padding: 64px;
   margin-top: 10vh;
   z-index: 10;
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+}
+
+.shrinkCal {
+  -webkit-transform: translateX(210px);
+          transform: translateX(210px);
 }
 
 .headerBox__title {
@@ -359,6 +360,21 @@ input::placeholder {
   text-align: center;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 24px;
+  padding-left: 24PX;
+}
+
 .mb8 {
   margin-bottom: 8px;
 }
@@ -380,7 +396,7 @@ input::placeholder {
 }
 
 .resultCard {
-  z-index: -1;
+  position: relative;
   background: #FFFBEF;
   border: 2px solid #C9991D;
   -webkit-box-sizing: border-box;
@@ -392,8 +408,31 @@ input::placeholder {
   max-width: 500px;
   margin-top: 10vh;
   margin-bottom: 10vh;
-  -webkit-transform: translate(-64px, 48px);
-          transform: translate(-64px, 48px);
+  -webkit-transform: translate(-40px, 48px);
+          transform: translate(-40px, 48px);
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+}
+
+.resultCard .ic-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 8px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  cursor: pointer;
+}
+
+.resultCard .ic-close:hover {
+  background: #f5e6bd;
+}
+
+.resultCard .ic-close img {
+  width: 100%;
+  height: 100%;
 }
 
 .resultCard__title {
@@ -404,6 +443,7 @@ input::placeholder {
 
 .resultCard__bmi {
   font-size: 80px;
+  color: #0ABF57;
   line-height: 80px;
   font-family: "Quicksand";
   text-align: center;
@@ -411,17 +451,19 @@ input::placeholder {
 }
 
 .resultCard__status {
-  position: relative;
+  text-align: center;
 }
 
 .resultCard__status__line {
-  position: absolute;
+  position: relative;
   background: black;
   height: 1px;
+  top: -28px;
+  z-index: -2;
 }
 
 .resultCard__status__text {
-  width: auto;
+  display: inline-block;
   padding: 4px 6px;
   background: #FFFBEF;
   font-size: 32px;
@@ -441,6 +483,11 @@ input::placeholder {
   line-height: 24px;
   color: #0ABF57;
   text-align: center;
+}
+
+.shrinkResult {
+  -webkit-transform: translate(-260px, 48px);
+          transform: translate(-260px, 48px);
 }
 
 .btnStart {

@@ -20,11 +20,13 @@ input[type=text] {
     border: none;
     border-radius: 12px;
     font-size: 24px;
+    font-weight: bold;
 }
 
 input::placeholder {
     color: #BDBDBD;
     font-size: 24px;
+    font-weight: 400;
 }
 
 .maker {
@@ -49,13 +51,6 @@ input::placeholder {
     }
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-
-}
 
 .cal-Main {
     max-width: 530px;
@@ -67,6 +62,12 @@ input::placeholder {
     padding: 64px;
     margin-top: 10vh;
     z-index: 10;
+    transform: translateX(24px);
+    transition: .3s all ease-in-out;
+}
+
+.shrinkCal {
+    transform: translateX(210px);
 }
 
 .headerBox {
