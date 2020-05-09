@@ -1,0 +1,77 @@
+.history {
+    padding-top: 48px;
+    max-width: 860px;
+    margin: 0 auto;
+
+    &__title {
+        font-size: 32px;
+        line-height: 48px;
+    }
+}
+
+
+.history__content {
+    background: #FFFFFF;
+    border: 2px solid #CCCCCC;
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    padding: 24px 0;
+
+    .history__list {
+        display: flex;
+        // height: 112px;
+        padding-bottom: 24px;
+        box-shadow: inset 0px -1px 0px #ECECEC;
+        align-items: center;
+
+        &__status {
+            padding: 8px 12px;
+            background: $green;
+            color: white;
+            font-size: 18px;
+            line-height: 24;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            margin-left: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__text {
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+.history__list__bmi,
+.history__list__height,
+.history__list__weight,
+.history__list__time {
+    width: 96px;
+
+    &__title {
+        font-size: 16px;
+        line-height: 20px;
+        color: $yellow;
+        margin-bottom: 8px;
+    }
+
+    &__value {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+.history__list__bmi {
+    &__value {
+        color: $green;
+    }
+}
