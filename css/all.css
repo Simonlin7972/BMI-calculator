@@ -261,7 +261,7 @@ table {
 
 .history {
   padding-top: 48px;
-  max-width: 860px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
@@ -285,6 +285,7 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 24px;
   padding-bottom: 24px;
   -webkit-box-shadow: inset 0px -1px 0px #ECECEC;
           box-shadow: inset 0px -1px 0px #ECECEC;
@@ -293,13 +294,16 @@ table {
           align-items: center;
 }
 
+.history__content .history__list:hover {
+  background: #FFFBEF;
+}
+
 .history__content .history__list__status {
-  padding: 8px 12px;
+  padding: 8px 16px;
   background: #0ABF57;
   color: white;
   font-size: 18px;
   line-height: 24;
-  width: 60px;
   height: 60px;
   border-radius: 12px;
   margin-left: 64px;
@@ -349,8 +353,34 @@ table {
   line-height: 32px;
 }
 
+.history__list__time {
+  width: 140px;
+}
+
 .history__list__bmi__value {
   color: #0ABF57;
+}
+
+.history__list__delete {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(234, 11, 11, 0.1);
+}
+
+.history__list__delete .ic-delete {
+  width: 18px;
+  height: 18px;
 }
 
 * {

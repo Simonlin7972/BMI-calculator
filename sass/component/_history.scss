@@ -1,6 +1,6 @@
 .history {
     padding-top: 48px;
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
 
     &__title {
@@ -21,17 +21,22 @@
     .history__list {
         display: flex;
         // height: 112px;
+        padding-top: 24px;
         padding-bottom: 24px;
         box-shadow: inset 0px -1px 0px #ECECEC;
         align-items: center;
 
+        &:hover {
+            background: #FFFBEF;
+        }
+
         &__status {
-            padding: 8px 12px;
+            padding: 8px 16px;
             background: $green;
             color: white;
             font-size: 18px;
             line-height: 24;
-            width: 60px;
+            // width: 60px;
             height: 60px;
             border-radius: 12px;
             margin-left: 64px;
@@ -70,8 +75,29 @@
     }
 }
 
+.history__list__time {
+    width: 140px;
+}
+
 .history__list__bmi {
     &__value {
         color: $green;
+    }
+}
+
+
+.history__list__delete {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(#EA0B0B, 0.1);
+
+    .ic-delete {
+        width: 18px;
+        height: 18px;
     }
 }
