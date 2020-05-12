@@ -7,10 +7,10 @@
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.12);
     border-radius: 12px;
     padding: 64px 52px 64px 120px;
-    max-width: 500px;
+    max-width: 440px;
     margin-top: 10vh;
     margin-bottom: 10vh;
-    transform: translate(-40px, 48px);
+    transform: translate(-210px, 48px);
     transition: .3s all ease-in-out;
 
     .ic-close {
@@ -90,6 +90,6 @@
     }
 }
 
-.shrinkResult {
-    transform: translate(-260px, 48px);
+.moveResult {
+    transform: translate(-56px, 48px);
 }

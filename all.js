@@ -16,14 +16,23 @@ var weightInput = document.querySelector(".inputWeight");
 var data = [];
 
 // EventListenr
-
 btnClose.addEventListener("click", closeResult, false);
 btnStart.addEventListener("click", sendData, false);
+weightInput.addEventListener("keydown", enterData, false);
+
+//add data via keyboard
+function enterData(e) {
+  var keyEnter = e.keyCode;
+  // 如果按enter的話執行 addData function
+  if (keyEnter == 13) {
+    sendData();
+  }
+}
 
 function sendData() {
   //UI transition
-  result.classList.remove("shrinkResult");
-  claMain.classList.remove("shrinkCal");
+  result.classList.add("moveResult");
+  claMain.classList.add("moveCal");
 
   //get data
   var heightValue = heightInput.value;
@@ -82,6 +91,6 @@ function sendData() {
 
 function closeResult(e) {
   // shrink animation
-  result.classList.add("shrinkResult");
-  claMain.classList.add("shrinkCal");
+  result.classList.remove("moveResult");
+  claMain.classList.remove("moveCal");
 }

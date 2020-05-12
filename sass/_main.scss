@@ -63,12 +63,14 @@ input::placeholder {
     padding: 64px;
     margin-top: 10vh;
     z-index: 10;
-    transform: translateX(24px);
     transition: .3s all ease-in-out;
+    // transform: translateX(10px);
+    transform: translateX(210px);
 }
 
-.shrinkCal {
-    transform: translateX(210px);
+.moveCal {
+    // transform: translateX(210px);
+    transform: translateX(10px);
 }
 
 .headerBox {
