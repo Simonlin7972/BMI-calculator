@@ -31,18 +31,20 @@ function enterData(e) {
 
 function sendData() {
   //UI transition
-  result.classList.add("moveResult");
-  claMain.classList.add("moveCal");
+  if (heightInput.value != [] && weightInput.value != []) {
+    result.classList.add("moveResult");
+    claMain.classList.add("moveCal");
 
-  //get data
-  var heightValue = heightInput.value;
-  var weightValue = weightInput.value;
+    //get data
+    var heightValue = heightInput.value;
+    var weightValue = weightInput.value;
 
-  var bmiHeight = (heightValue / 100) * (heightValue / 100);
-  var bmiValue = weightValue / bmiHeight;
+    var bmiHeight = (heightValue / 100) * (heightValue / 100);
+    var bmiValue = weightValue / bmiHeight;
 
-  // toFixed保留小數點後兩位
-  bmi.textContent = bmiValue.toFixed(2);
+    // toFixed保留小數點後兩位
+    bmi.textContent = bmiValue.toFixed(2);
+  }
 
   //bmi color 顏色好像不能用變數
   switch (true) {
@@ -93,4 +95,6 @@ function closeResult(e) {
   // shrink animation
   result.classList.remove("moveResult");
   claMain.classList.remove("moveCal");
+  heightInput.value = "";
+  weightInput.value = "";
 }
