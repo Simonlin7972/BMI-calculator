@@ -74,6 +74,7 @@
 .history__list__weight,
 .history__list__time {
     width: 96px;
+    text-align: left;
 
     &__title {
         font-size: 16px;
@@ -89,7 +90,7 @@
 }
 
 .history__list__time {
-    width: 140px;
+    width: 200px;
 }
 
 .history__list__bmi {

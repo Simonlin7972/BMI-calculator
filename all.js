@@ -13,6 +13,12 @@ var bmiCommentBox = document.querySelector(".resultCard__comment");
 var heightInput = document.querySelector(".inputHeight");
 var weightInput = document.querySelector(".inputWeight");
 
+//history List
+var bmiHistory = document.querySelector(".history__list__bmi__value");
+var heightHistory = document.querySelector(".history__list__height__value");
+var weightHistory = document.querySelector(".history__list__weight__value");
+var searchDate = document.querySelector(".history__list__time__value");
+
 var data = [];
 
 // EventListenr
@@ -29,6 +35,7 @@ function enterData(e) {
   }
 }
 
+//傳送 input 的值
 function sendData() {
   //UI transition
   if (heightInput.value != [] && weightInput.value != []) {
@@ -89,10 +96,23 @@ function sendData() {
       bmiCommentBox.style.border = "1px solid #F24E07";
       break;
   }
+
+  // searchDate.innerHTML = historyDate;
+
+  data.push(bmiValue, heightValue, weightValue);
+  updateHistory();
 }
 
+function updateHistory(item) {
+  bmiHistory.textContent = data[0].toFixed(2);
+  heightHistory.textContent = data[1] + "cm";
+  weightHistory.textContent = data[2] + "kg";
+  // for (i < 0; i < item.length; i++) {
+  // }
+}
+
+// 點擊 close 按鈕，回到初始狀態
 function closeResult(e) {
-  // shrink animation
   result.classList.remove("moveResult");
   claMain.classList.remove("moveCal");
   heightInput.value = "";
